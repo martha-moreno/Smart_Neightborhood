@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAccounts>
+  <Accounts>
+    <Username>martha_staff</Username>
+    <Credential>staff</Credential>
+  </Accounts>
+  <Accounts>
+    <Username>TA</Username>
+    <Credential>Cse44598!</Credential>
+  </Accounts>
+  <Accounts>
+    <Username>admin</Username>
+    <Credential>Cse44598!</Credential>
+  </Accounts>
+</ArrayOfAccounts>

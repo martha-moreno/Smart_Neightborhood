@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar19.fulton.asu.edu/Page7/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar19.fulton.asu.edu/Page7/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_UploadImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UploadImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListViolations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListViolations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetListViolations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListViolationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageFromFilename_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageFromFilename" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImageFromFilename_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageFromFilenameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetrieveEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveEvents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetrieveEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_VerifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetrieveAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RetrieveAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendAddressList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendAddressList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendAddressList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendAddressListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="UploadImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UploadImage" message="tns:IService1_UploadImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UploadImageResponse" message="tns:IService1_UploadImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListViolations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetListViolations" message="tns:IService1_GetListViolations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetListViolationsResponse" message="tns:IService1_GetListViolations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageFromFilename">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetImageFromFilename" message="tns:IService1_GetImageFromFilename_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetImageFromFilenameResponse" message="tns:IService1_GetImageFromFilename_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostEvent" message="tns:IService1_PostEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostEventResponse" message="tns:IService1_PostEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetrieveEvents" message="tns:IService1_RetrieveEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetrieveEventsResponse" message="tns:IService1_RetrieveEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateAccount" message="tns:IService1_CreateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateAccountResponse" message="tns:IService1_CreateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/VerifyUser" message="tns:IService1_VerifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/VerifyUserResponse" message="tns:IService1_VerifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RetrieveAccounts" message="tns:IService1_RetrieveAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RetrieveAccountsResponse" message="tns:IService1_RetrieveAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAddressList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendAddressList" message="tns:IService1_SendAddressList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendAddressListResponse" message="tns:IService1_SendAddressList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/UploadImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListViolations">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetListViolations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageFromFilename">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetImageFromFilename" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEvents">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetrieveEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/VerifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAccounts">
+      <soap:operation soapAction="http://tempuri.org/IService1/RetrieveAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAddressList">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendAddressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar19.fulton.asu.edu/Page7/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

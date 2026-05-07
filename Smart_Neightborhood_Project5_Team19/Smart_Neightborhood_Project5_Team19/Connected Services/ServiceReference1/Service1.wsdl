@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar19.fulton.asu.edu/Page4/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar19.fulton.asu.edu/Page4/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_findNearestStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:findNearestStore" />
+  </wsdl:message>
+  <wsdl:message name="IService1_findNearestStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findNearestStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_populationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:populationData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_populationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:populationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MakePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakePayment" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MakePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BillRetriever_InputMessage">
+    <wsdl:part name="parameters" element="tns:BillRetriever" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BillRetriever_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BillRetrieverResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="findNearestStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/findNearestStore" message="tns:IService1_findNearestStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/findNearestStoreResponse" message="tns:IService1_findNearestStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="populationData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/populationData" message="tns:IService1_populationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/populationDataResponse" message="tns:IService1_populationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MakePayment" message="tns:IService1_MakePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MakePaymentResponse" message="tns:IService1_MakePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BillRetriever">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BillRetriever" message="tns:IService1_BillRetriever_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BillRetrieverResponse" message="tns:IService1_BillRetriever_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findNearestStore">
+      <soap:operation soapAction="http://tempuri.org/IService1/findNearestStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="populationData">
+      <soap:operation soapAction="http://tempuri.org/IService1/populationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePayment">
+      <soap:operation soapAction="http://tempuri.org/IService1/MakePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillRetriever">
+      <soap:operation soapAction="http://tempuri.org/IService1/BillRetriever" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar19.fulton.asu.edu/Page4/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
